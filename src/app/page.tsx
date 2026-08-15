@@ -3,6 +3,7 @@ import Stats from "@/components/Stats";
 import Mission from "@/components/Mission";
 import JoinCommunity from "@/components/JoinCommunity";
 import WhatWeShare from "@/components/WhatWeShare";
+import Noticeboard from "@/components/Noticeboard";
 import Principles from "@/components/Principles";
 import Timeline from "@/components/Timeline";
 import ClosingCTA from "@/components/ClosingCTA";
@@ -16,6 +17,7 @@ export default function Home() {
       <Mission />
       <JoinCommunity />
       <WhatWeShare />
+      <Noticeboard />
       <Principles />
       <Timeline />
       <ClosingCTA />
