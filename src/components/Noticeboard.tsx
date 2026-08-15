@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { MessageSquarePlus } from "lucide-react";
 
 export default function Noticeboard() {
@@ -34,7 +34,7 @@ export default function Noticeboard() {
     },
   ];
 
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -42,7 +42,7 @@ export default function Noticeboard() {
     },
   };
 
-  const cardVariants = {
+  const cardVariants: Variants = {
     hidden: { y: 20, opacity: 0, scale: 0.95 },
     visible: { y: 0, opacity: 1, scale: 1, transition: { type: "spring", stiffness: 100 } },
   };

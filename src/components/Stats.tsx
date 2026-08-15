@@ -1,7 +1,7 @@
 "use client";
 
 import { Users, Code, Calendar } from "lucide-react";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 
 export default function Stats() {
   const stats = [
@@ -28,7 +28,7 @@ export default function Stats() {
     },
   ];
 
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -38,7 +38,7 @@ export default function Stats() {
     },
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { y: 20, opacity: 0, scale: 0.9 },
     visible: {
       y: 0,
