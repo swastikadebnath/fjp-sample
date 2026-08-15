@@ -45,7 +45,7 @@ export default function JoinCommunity() {
             className="flex flex-col items-center md:items-start text-center md:text-left space-y-6"
           >
             <motion.a 
-              href="https://chat.whatsapp.com/PLACEHOLDER" 
+              href="https://chat.whatsapp.com/DoBwZL9e3dWKzYZkpJkcYv?s=cl&p=a&ilr=4" 
               target="_blank" 
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}

@@ -29,7 +29,7 @@ export default function ClosingCTA() {
         </motion.p>
 
         <motion.a 
-          href="https://chat.whatsapp.com/PLACEHOLDER" 
+          href="https://chat.whatsapp.com/DoBwZL9e3dWKzYZkpJkcYv?s=cl&p=a&ilr=4" 
           target="_blank" 
           rel="noopener noreferrer"
           initial={{ y: 30, opacity: 0 }}
