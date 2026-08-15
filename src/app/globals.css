@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: #0A0A0A;
+  --color-foreground: #F5F5F0;
+  --color-rust: #BE5103;
+  --color-yellow: #FFCE1B;
+  --color-teal: #069494;
+  --color-dark-rust: #B7410E;
+  --color-offwhite: #F5F5F0;
+  
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-bungee);
+}
+
+:root {
+  --background: #0A0A0A;
+  --foreground: #F5F5F0;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), sans-serif;
+  overflow-x: hidden;
+}
+
+/* Subtle grain texture overlay */
+.bg-grain {
+  position: relative;
+}
+
+.bg-grain::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  opacity: 0.04;
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* Torn paper or brush stroke underline accent */
+.brush-underline {
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+}
+
+.brush-underline::after {
+  content: "";
+  position: absolute;
+  bottom: 0.1em;
+  left: -2%;
+  width: 104%;
+  height: 0.3em;
+  background-color: var(--color-rust);
+  z-index: -1;
+  transform: rotate(-1deg);
+  border-radius: 2px 8px 3px 6px;
+  opacity: 0.8;
+}
+
+/* Bracket corners */
+.bracket-corners {
+  position: relative;
+}
+.bracket-corners::before,
+.bracket-corners::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-color: var(--color-yellow);
+  border-style: solid;
+  pointer-events: none;
+}
+.bracket-corners::before {
+  top: -2px;
+  left: -2px;
+  border-width: 2px 0 0 2px;
+}
+.bracket-corners::after {
+  bottom: -2px;
+  right: -2px;
+  border-width: 0 2px 2px 0;
+}
