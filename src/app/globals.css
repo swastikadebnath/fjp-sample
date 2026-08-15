@@ -1,28 +1,44 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-background: #0A0A0A;
-  --color-foreground: #F5F5F0;
-  --color-rust: #BE5103;
-  --color-yellow: #FFCE1B;
-  --color-teal: #069494;
-  --color-dark-rust: #B7410E;
-  --color-offwhite: #F5F5F0;
+  --color-background: var(--bg-color);
+  --color-foreground: var(--fg-color);
+  --color-rust: var(--rust-color);
+  --color-yellow: var(--yellow-color);
+  --color-teal: var(--teal-color);
+  --color-dark-rust: var(--dark-rust-color);
+  --color-offwhite: var(--offwhite-color);
   
   --font-sans: var(--font-inter);
   --font-display: var(--font-bungee);
 }
 
 :root {
-  --background: #0A0A0A;
-  --foreground: #F5F5F0;
+  --bg-color: #F5F5F0;
+  --fg-color: #1A1A1A;
+  --rust-color: #BE5103;
+  --yellow-color: #D9A000;
+  --teal-color: #069494;
+  --dark-rust-color: #B7410E;
+  --offwhite-color: #1A1A1A;
+}
+
+.dark {
+  --bg-color: #0A0A0A;
+  --fg-color: #F5F5F0;
+  --rust-color: #BE5103;
+  --yellow-color: #FFCE1B;
+  --teal-color: #069494;
+  --dark-rust-color: #B7410E;
+  --offwhite-color: #F5F5F0;
 }
 
 body {
-  background-color: var(--background);
-  color: var(--foreground);
+  background-color: var(--color-background);
+  color: var(--color-foreground);
   font-family: var(--font-sans), sans-serif;
   overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Subtle grain texture overlay */

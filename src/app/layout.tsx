@@ -25,13 +25,20 @@ export const metadata: Metadata = {
   description: "A community of builders, coders, innovators, and future leaders.",
 };
 
+import { ThemeProvider } from "@/components/ThemeProvider";
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html
       lang="en"
       className={`${inter.variable} ${bungee.variable} h-full antialiased`}
+      suppressHydrationWarning
     >
-      <body className="min-h-full flex flex-col bg-grain">{children}</body>
+      <body className="min-h-full flex flex-col bg-grain">
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   );
 }

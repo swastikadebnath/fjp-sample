@@ -1,3 +1,5 @@
+import ThemeToggle from "./ThemeToggle";
+
 export default function Footer() {
   const year = new Date().getFullYear();
   
@@ -13,10 +15,8 @@ export default function Footer() {
           </p>
         </div>
         
-        <div className="flex gap-6">
-          <a href="#" className="text-[var(--color-offwhite)]/70 hover:text-[var(--color-yellow)] transition-colors">Instagram</a>
-          <a href="#" className="text-[var(--color-offwhite)]/70 hover:text-[var(--color-teal)] transition-colors">LinkedIn</a>
-          <a href="#" className="text-[var(--color-offwhite)]/70 hover:text-[var(--color-rust)] transition-colors">GitHub</a>
+        <div className="flex gap-6 items-center">
+          <ThemeToggle />
         </div>
         
         <div className="text-[var(--color-offwhite)]/40 text-sm">
