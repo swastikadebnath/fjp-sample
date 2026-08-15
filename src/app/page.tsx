@@ -1,4 +1,5 @@
 import Hero from "@/components/Hero";
+import Stats from "@/components/Stats";
 import Mission from "@/components/Mission";
 import JoinCommunity from "@/components/JoinCommunity";
 import WhatWeShare from "@/components/WhatWeShare";
@@ -11,6 +12,7 @@ export default function Home() {
   return (
     <main className="flex-1">
       <Hero />
+      <Stats />
       <Mission />
       <JoinCommunity />
       <WhatWeShare />
